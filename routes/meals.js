@@ -4,15 +4,15 @@ var { getMeals, addMeals } = require('../controller/mealsController');
 
 /* GET users listing. */
 
-router.get('/', function (req, res, next) {
+router.get('/', (req, res, next) => {
     getMeals(req, res, next);
 });
 
-router.get('/getMeals', function (req, res, next) {
+router.get('/getMeals', (req, res, next) => {
     getMeals(req, res, next);
 });
 
-router.post('/addMeal', function (req, res, next) {
+router.post('/addMeal', (req, res, next) => {
     addMeals(req, res, next);
 });
 

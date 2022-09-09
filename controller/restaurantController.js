@@ -17,7 +17,15 @@ getRestaurantByCity = (req, res, next) => {
             res.send(response);
     })
 }
-
+getRestaurantsOnLimit = (req, res) => {
+    restaurantSchema.find({ "city": req.query.city, "page": req.query.page, "limit": req.query.limit }, (err, responce) => {
+        if (err) {
+            res.send("exception occured");
+        }
+        else
+            res.send(responce)
+    })
+}
 getRestaurantById = (req, res, next) => {
     restaurantSchema.findById({ _id: req.params._id }, (err, response) => {
         if (err)
