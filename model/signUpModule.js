@@ -7,8 +7,8 @@ const userSchema = mongoose.Schema({
     unique: true
   },
 
-  name: { type: String, require: true, unique: true },
-  password: { type: String, require: true, unique: true }
+  name: { type: String},
+  password: { type: String}
 })
 userSchema.plugin(uniqueValidater);
 module.exports = mongoose.model("Users", userSchema)
