@@ -24,7 +24,8 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(cors({
-  origin: '*'
+  origin: "https://shashidharsunnapu.netlify.app",
+  optionSuccessStatus: 200
 }));
 
 app.use(logger('dev'));
